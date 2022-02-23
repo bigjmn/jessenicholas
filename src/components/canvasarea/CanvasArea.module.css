@@ -1,0 +1,23 @@
+.outerContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.canvasHolder{
+  position: relative;
+}
+.activeAttack{
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+}
+.passiveAttack{
+  background-color: white;
+  padding: 10px;
+}
+.headerWrapper{
+
+
+}

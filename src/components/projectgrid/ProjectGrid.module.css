@@ -1,0 +1,44 @@
+.outerContainer{
+
+}
+.projectsContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.snapShot{
+  width: 100%;
+}
+
+.responsiveWrapper{
+  flex: 50%;
+  border: 1px solid;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+
+}
+@media (max-width: 800px) {
+  .projectsContainer {
+    flex-direction: column;
+  }
+}
+.projectWrapper{
+  width: 300px;
+  margin: 30px;
+  border: 1px solid;
+
+
+}
+.projectWrapper :hover{
+  cursor: pointer;
+
+
+
+}
+.projectSnap{
+  width: 300px;
+  height: 300px;
+  border: 1px solid;
+}

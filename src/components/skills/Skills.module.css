@@ -1,0 +1,27 @@
+.skillsContainer{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  border: 1px solid;
+  padding: 3px;
+}
+.skillWrapper{
+  width: 300px;
+  height:100%;
+  border: 1px solid;
+  padding: 10px;
+}
+.iconWrapper{
+  width: 100%;
+  text-align: center;
+  border: 1px dashed;
+
+}
+.skillIcon{
+  width: 30%;
+  height: auto;
+
+}
+p{
+  text-align: left;
+}
