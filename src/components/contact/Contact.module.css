@@ -1,0 +1,17 @@
+.outerContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+}
+.outerContainer h2{
+  padding: 3px;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 34px;
+}
+.contactWrapper{
+
+}

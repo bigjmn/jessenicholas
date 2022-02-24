@@ -16,7 +16,7 @@ const ProjectGrid = () => {
 
   return (
     <div className={classes.outerContainer}>
-      <h2>Projects</h2>
+      <h2>projects</h2>
 
       <div className={classes.projectsContainer}>
 

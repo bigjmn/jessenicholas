@@ -9,7 +9,6 @@ import TetrisBuddies from './pages/projects/TetrisBuddies'
 import QMazeSolver from './pages/projects/QMazeSolver'
 import Welp from './pages/projects/Welp'
 
-import PageTemplate from './pages/pagetemplate/PageTemplate'
 
 function App() {
   return (
@@ -22,7 +21,6 @@ function App() {
           <Route path='/tetrisbuddies' element={<TetrisBuddies />} />
           <Route path='/welp' element={<Welp />} />
           <Route path='/qmazesolver' element={<QMazeSolver />} />
-          <Route path='/pagetemplate' element={<PageTemplate />} />
         </Routes>
 
 

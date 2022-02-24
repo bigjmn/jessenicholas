@@ -42,3 +42,10 @@
   height: 300px;
   border: 1px solid;
 }
+
+.outerContainer h2{
+  padding: 3px;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 34px;
+}
