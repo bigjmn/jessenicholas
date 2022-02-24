@@ -25,8 +25,10 @@ const ProjectGrid = () => {
             <div className={classes.snapShot}>
               <video className={classes.projectSnap} src={shockdrawvid} alt='shock and draw' autoPlay loop muted></video>
             </div>
+      
             <h3>Shock and Draw</h3>
               <p>A head-to-head team drawing and guessing game</p>
+
           </motion.div>
 
 

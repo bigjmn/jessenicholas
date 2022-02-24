@@ -1,11 +1,14 @@
 body {
-  font-family: "helvetica neue",helvetica,arial,sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
-  font-size: 1.1em;
+  font-size: 1em;
 }
 ul, li, p, h1, h2, h3, h4 {
   margin: 0;
-  padding: 0;
+  padding: 3px;
+}
+h4{
+  font-weight: 600;
 }
 ul {
   list-style-type: none;
@@ -13,6 +16,6 @@ ul {
 p, li {
 
     font-size: 16px;
-    font-family: "helvetica neue",helvetica,arial,sans-serif;
+    font-family:'Poppins', sans-serif;
     font-weight: 400;
 }

@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 import classes from './Home.module.css'
 
+import Bio from '../../components/bio/Bio'
 import Skills from '../../components/skills/Skills'
 import Contact from '../../components/contact/Contact'
 import ProjectGrid from '../../components/projectgrid/ProjectGrid'
@@ -14,9 +15,11 @@ const Home = () => {
 
 
       <div className={classes.contentWrapper}>
-      <Skills />
-      <ProjectGrid />
-      <Contact />
+        <Bio />
+
+        <Skills />
+        <ProjectGrid />
+        <Contact />
 
       </div>
 

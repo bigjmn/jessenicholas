@@ -13,15 +13,15 @@ const Skills = () => {
       <h2>skills</h2>
       <div className={classes.skillsContainer}>
 
-        <div className={classes.skillPair}>
+
 
         <div className={classes.skillWrapper}>
           <div className={classes.iconWrapper}>
             <img className={classes.skillIcon} src={compicon} alt='front-end'></img>
           </div>
-          <h4>front-end development</h4>
+          <h4 style={{fontWeight:'600'}}>front-end development</h4>
           <p>I like creating dynamic websites, usually with React, though I’ve also used Vue 3 and of course good ol’ vanilla javascript. Design-wise, I go CSS or Bootstrap 5. </p>
-          <p><i>I know my way around the Document Object Mode, or ‘HTML’ for short.
+          <p><i>I know my way around the Document Object Model, or ‘HTML’ for short.
 </i></p>
         </div>
 
@@ -34,9 +34,9 @@ const Skills = () => {
           <p><i>I'm a socket man, burning up his fuse up here alone...</i></p>
         </div>
 
-        </div>
 
-        <div className={classes.skillPair}>
+
+
 
 
         <div className={classes.skillWrapper}>
@@ -49,18 +49,11 @@ const Skills = () => {
             <p><i>Smarter Child and I are still each waiting for the other to apologize.</i></p>
         </div>
 
-        <div className={classes.skillWrapper}>
-          <div className={classes.iconWrapper}>
-            <img className={classes.skillIcon} src={analyticsicon} alt='analytics'></img>
-          </div>
-          <h4>Analytics</h4>
-          <p>I use statistical inference to analyze data and present it in ways that are clear and meaningful. I can also recognize when data is represented in ways that are biased and misleading. </p>
-          <p><i>You could call misleading graphs 'devious plots.' But don't.</i></p>
-        </div>
+
 
         </div>
 
-      </div>
+
     </div>
   )
 }

@@ -1,0 +1,19 @@
+.outerContainer{
+  display: flex;
+
+  align-items: flex-start;
+  padding: 18px;
+}
+.bioWrapper{
+  max-width: 500px;
+  padding-left: 20px;
+}
+.bioWrapper h1{
+  text-align: left;
+  padding-bottom: 5px;
+  font-size: 4em
+}
+.bioWrapper p{
+
+  padding-bottom: 10px;
+}
