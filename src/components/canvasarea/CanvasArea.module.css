@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  min-width: 1000px;
 
 }
 .canvasHolder{
@@ -18,6 +19,10 @@
   padding: 10px;
 }
 .headerWrapper{
+  overflow-x: scroll;
+  padding: 15px;
+
+
 
 
 }
