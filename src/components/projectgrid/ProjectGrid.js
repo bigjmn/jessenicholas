@@ -16,7 +16,7 @@ const slideRight = {
   },
   visible: {
     x: 0,
-    transition: {delay: 0.5, duration:1.5, ease:'easeOut'}
+    transition: {delay: 0, duration:1, ease:'easeOut'}
   }
 }
 const slideLeft = {
@@ -25,7 +25,7 @@ const slideLeft = {
   },
   visible: {
     x: 0,
-    transition: {delay:.5, duration:1.5, ease:'easeOut'}
+    transition: {delay:0, duration:1, ease:'easeOut'}
   }
 
 }
@@ -35,7 +35,7 @@ const slideRight2 = {
   },
   visible: {
     x: 0,
-    transition: {delay: 1, duration:1.5, ease:'easeOut'}
+    transition: {delay: .5, duration:1, ease:'easeOut'}
   }
 }
 const slideLeft2 = {
@@ -44,7 +44,7 @@ const slideLeft2 = {
   },
   visible: {
     x: 0,
-    transition: {delay:1, duration:1.5, ease:'easeOut'}
+    transition: {delay:.5, duration:1, ease:'easeOut'}
   }
 
 }
