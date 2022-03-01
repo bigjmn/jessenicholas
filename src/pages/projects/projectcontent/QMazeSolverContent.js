@@ -12,8 +12,10 @@ const QMazeSolverContent = () => {
         </div>
         <div className={classes.sectionContent}>
           <p>The best way to understand this particular project is to mess around with it for a couple minutes. Hit 'run' to start.</p>
+          <p><strong><i>Note: May not work on mobile. Sorry.</i></strong></p>
           <p>Q Mazebot is an AI that solves mazes using reinforcement learning techniques. The user creates the maze (or picks on from a bank of random mazes) and Q Mazebot sets off, updating the ‘value’ of each square as it searches for the finish line. Every move Q Mazebot moves to the adjacent square with the highest value (closest to zero, as all values are negative) with ties broken randomly. The value of the square it leaves is updated to be one less than its highest-rated neighbor. You can see how Mazebot values each square by the square’s color - the darker the red, the worse Mazebot values that square. When Mazebot finds the finish line, he starts over from the beginning, but the square values don’t reset. Eventually Mazebot will be able to solve the maze the fastest possible way. The maze can also feature a key that must be picked up to open a corresponding gate.</p>
           <p>The graph tracks the number of steps it takes Mazebot to complete the maze. Mazebot will usually get worse before he gets better. Eventually Mazebot will complete the maze the same way every time - the fastest way. Use the slider to set Mazebot’s step speed. For big mazes (and even not so big mazes) you’ll want this set pretty high.</p>
+          <p>Check out the <a id='gitlink' href="http://github.com/bigjmn/q-maze-bot">Github repo.</a> </p>
 
         </div>
       </div>
@@ -63,7 +65,7 @@ const QMazeSolverContent = () => {
           <p>There’s a few directions I could go with this.</p>
           <p>One is to make the actual mazes more interesting. I could integrate one-way gates, teleporting spaces that go to different places with varying probability, moving walls, etc. Since the basic algorithm should work for any graph, I could offer maze templates to just a square grid. Any pattern that tessellates could theoretically work, albeit with some modifications to the UI.</p>
           <p>The other approach is one that Im much more excited about, and involved genetic algorithms. Instead of just one Mazebot, I want a dozen or so. Each one will have its own initial maze-solving strategy in the form of a Markov adjacency matrix. They’ll all solve the maze, and then the worst ones will be dropped, and the best ones will… well I don’t want to say ‘mate’, but that’s essentially what it is.</p>
-          <p>For more details and to follow my progress, check out the project notebook. </p>
+          <p>For more details and to follow my progress, check out the <a href="https://colab.research.google.com/drive/1npJplBzKTKqzHt_qoV2OW4jr0OiKkmR5?usp=sharing">project notebook.</a> </p>
 
 
         </div>

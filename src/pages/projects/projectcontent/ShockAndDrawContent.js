@@ -16,7 +16,9 @@ const ShockAndDrawContent = () => {
 
 
             </p>
-            <p>Each team has a ‘bonus timer’ that resets with every new word. If the word is guessed before the timer runs out, the opposing team is hit with a random ‘attack’ which hinders them in some way. There are currently 8 different attacks:</p>
+            <p>Each team has a ‘bonus timer’ that resets with every new word. If the word is guessed before the timer runs out, the opposing team is hit with a random ‘attack’ which hinders them in some way. Check out the demo to see what I mean.</p>
+            <p><strong><i>Note: The above preview is not mobile compatible, sorry.</i></strong></p>
+            <p> There are currently 8 different attacks:</p>
             <ul>
               <li><span style={{fontWeight:'bold'}}>50 Shades:</span> The team’s drawer is unable to use colors.</li>
               <li><span style={{fontWeight:'bold'}}>Hidden Mouse:</span> The team’s drawer is unable to see the cursor. </li>
@@ -28,6 +30,7 @@ const ShockAndDrawContent = () => {
               <li><span style={{fontWeight:'bold'}}>Pointillism:</span> drawer can’t make brush strokes, only dots.</li>
             </ul>
             <p>Attacks last 20 seconds or until the end of the round, and can overlap. Drawers also have the option of passing on a word, but doing so hits their own team with an attack. </p>
+            <p>You can play the game <a href="https://shock-and-draw.herokuapp.com/">here</a>. Or, check out the <a href="https://github.com/bigjmn/shock-and-draw">GitHub repo.</a> </p>
           </div>
         </div>
 

@@ -69,6 +69,14 @@ const CanvasArea = () => {
     setDtx(guessCtx)
   }, [ctx, dtx])
 
+  const clearcanvas = () => {
+    [ctx, dtx].forEach(c => {
+      if (c){
+        c.clearRect(0,0,300,300)
+      }
+    })
+  }
+
   useEffect(() => {
     let fadeint = null
     if (fader){
@@ -183,16 +191,22 @@ const CanvasArea = () => {
     <div className={classes.headerWrapper}>
 
     <div className={classes.outerContainer}>
+      <div>
+        <h4>Drawer's Canvas</h4>
       {canvasSize && <div className={classes.canvasHolder} style={{width:canvasSize,height:canvasSize}}>
-        <canvas ref={drawCanRef} onMouseDown={handleMouseDown} onMouseMove={throttledMove} onMouseUp={handleMouseUp} width={canvasSize} height={canvasSize} style= {{position:'absolute', top:'0px',left:'0px',border:'1px solid'}}></canvas>
+        <canvas ref={drawCanRef} onMouseDown={handleMouseDown} onMouseMove={throttledMove} onMouseUp={handleMouseUp} width={canvasSize} height={canvasSize} style= {{position:'absolute', top:'0px',left:'0px',border:'1px solid', cursor: hiddenmouse ? 'none' : 'default'}}></canvas>
       </div>}
+      </div>
+      <div>
+        <h4>Guesser's Canvas</h4>
       {canvasSize && <div className={classes.canvasHolder} style={{width:canvasSize,height:canvasSize}}>
         <canvas ref={guessCanRef} width={canvasSize} height={canvasSize} style= {{position:'absolute',top:'0px',left:'0px',border:'1px solid'}}></canvas>
         {peepingtom && <canvas ref={peepingcanRef} onMouseDown={openPeep} onMouseMove={movePeep} onMouseUp={closePeep} width={canvasSize} height={canvasSize} style= {{position:'absolute', zIndex:'2', top:'0px',left:'0px',border:'1px solid'}}></canvas>}
       </div>}
+      </div>
       <MessageBox reverse={reverse} redacted={redacted} />
     </div>
-    <Palette setColor={setColor} setThickness={setThickness} fiftyshades={fiftyshades} fathands={fathands}/>
+    <Palette setColor={setColor} setThickness={setThickness} fiftyshades={fiftyshades} fathands={fathands} clearcanvas={clearcanvas}/>
     <div className={classes.attackHolder}>
       <button className={fiftyshades ? classes.activeAttack : classes.passiveAttack} onClick={handleShades}>Fifty Shades</button>
       <button className={fathands ? classes.activeAttack : classes.passiveAttack} onClick={handleFathands}>Johnny Fat Hands</button>

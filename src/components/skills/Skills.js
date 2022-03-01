@@ -1,17 +1,36 @@
-import {useState, useEffect} from 'react'
 import classes from './Skills.module.css'
 // skill logos
 import compicon from '../../assets/skillicons/frontendicon.png'
 import servericon from '../../assets/skillicons/servericon.png'
 import roboticon from '../../assets/skillicons/roboticon.png'
-import analyticsicon from '../../assets/skillicons/analyticsicon.png'
 
+import {motion} from 'framer-motion'
+
+const slideRight = {
+  hiddenleft: {
+    x: '-100vw'
+  },
+  visible: {
+    x: 0,
+    transition: {delay: 0.05, duration:1.5, ease:'easeOut'}
+  }
+}
+const slideLeft = {
+  hiddenright: {
+    x: '100vw'
+  },
+  visible: {
+    x: 0,
+    transition: {delay:.05, duration:1.5, ease:'easeOut'}
+  }
+
+}
 const Skills = () => {
 
   return (
-    <div className={classes.outerContainer}>
-      <h2>skills</h2>
-      <div className={classes.skillsContainer}>
+    <motion.div className={classes.outerContainer}>
+      <motion.h2 variants={slideLeft} initial='hiddenright' animate='visible'>skills</motion.h2>
+      <motion.div className={classes.skillsContainer} variants={slideRight} initial='hiddenleft' animate='visible'>
 
 
 
@@ -44,17 +63,17 @@ const Skills = () => {
             <img className={classes.skillIcon} src={roboticon} alt='ML'></img>
           </div>
           <h4>Machine Learning</h4>
-            <p>Deep learning. Reenforcement learning. Deep reenforcement learning. I use Tensorflow/Keras to compile and train models. Always got an eye out for Markov Chains.
+            <p>Deep learning. Reinforcement learning. Deep reinforcement learning. I use Tensorflow/Keras to compile and train models. Always got an eye out for Markov Chains.
             </p>
             <p><i>Smarter Child and I are still each waiting for the other to apologize.</i></p>
         </div>
 
 
 
-        </div>
+      </motion.div>
 
 
-    </div>
+    </motion.div>
   )
 }
 export default Skills

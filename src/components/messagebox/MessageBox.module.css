@@ -1,13 +1,16 @@
 .outerContainer{
   height: 300px;
   width: 160px;
+  margin-left: 10px;
 }
 .messagesWrapper{
   height: 260px;
   padding: 3px;
+  border: 1px solid;
 }
 input{
   height: 40px;
+  width: 100%
 }
 *{
   box-sizing: border-box;

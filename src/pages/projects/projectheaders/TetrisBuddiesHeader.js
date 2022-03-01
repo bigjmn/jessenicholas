@@ -1,12 +1,15 @@
-import {useState, useEffect} from 'react'
 import classes from './HeaderStyles.module.css'
-import ReactPlayer from 'react-player'
+import YoutubeEmbedder from '../../../components/youtubeembedder/YoutubeEmbedder'
 
 const TetrisBuddiesHeader = () => {
 
   return (
     <div className={classes.headerContainer}>
-      <ReactPlayer url={"https://www.youtube.com/watch?v=eWcCxjcXugg"}/>
+      <h1>Tetris Buddies</h1>
+      <div className={classes.tetrisHeaderContainer}>
+        <YoutubeEmbedder embedId={'eWcCxjcXugg'}/>
+
+      </div>
 
     </div>
   )

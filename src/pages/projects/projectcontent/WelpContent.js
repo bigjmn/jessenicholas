@@ -17,6 +17,7 @@ const WelpContent = () => {
           <p>
             I wish I had thought of this idea because it’s kind of genius, but the credit belongs to my cousin, hence the ‘Noah Madoff Presents’ on the title page. Still, I’m glad I was able to bring it to life.
           </p>
+          <p>You can use welp <a href="http://welp-thats-dinner.herokuapp.com/">here.</a> It might take a second to load at first, but should then be pretty quick.</p>
         </div>
       </div>
 

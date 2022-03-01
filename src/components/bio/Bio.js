@@ -1,11 +1,27 @@
 import {useState, useEffect} from 'react'
 import classes from './Bio.module.css'
 
+import {motion} from 'framer-motion'
+
+const pageMotion = {
+  initial: { opacity: 0, x: 0 },
+  animate: { opacity: 1, x: 100, transition: { duration: 2 } },
+  exit: { opacity: 0, x:0, transition: { ease: 'easeInOut' } }
+};
+
 const Bio = () => {
 
+
+
   return (
-    <div className={classes.outerContainer}>
-      <div className={classes.bioWrapper}>
+    <motion.div className={classes.outerContainer}
+      variants={pageMotion}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+
+>
+      <motion.div className={classes.bioWrapper}>
       <h1>Jesse Nicholas</h1>
       <p>Hi there.
       I'm a self-taught software engineer currently based in Brooklyn, NY.
@@ -19,8 +35,8 @@ const Bio = () => {
     <p>Let's make something cool.</p>
 
 
-      </div>
-    </div>
+    </motion.div>
+    </motion.div>
   )
 }
 export default Bio

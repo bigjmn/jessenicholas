@@ -1,30 +1,19 @@
-import {useState, useEffect} from 'react'
 import classes from './Home.module.css'
+import {Outlet} from 'react-router-dom'
 
-import Bio from '../../components/bio/Bio'
-import Skills from '../../components/skills/Skills'
-import Contact from '../../components/contact/Contact'
-import ProjectGrid from '../../components/projectgrid/ProjectGrid'
+import Navbar from '../../components/navbar/Navbar'
+
 const Home = () => {
 
 
   return (
     <div>
-
-
-
-
-      <div className={classes.contentWrapper}>
-        <Bio />
-
-        <Skills />
-        <ProjectGrid />
-        <Contact />
-
-      </div>
-
-
+      <Navbar />
+      <main >
+        <Outlet />
+      </main>
     </div>
+
   )
 }
 export default Home

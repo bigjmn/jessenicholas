@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 import classes from './MessageBox.module.css'
 
 const MessageBox = ({reverse, redacted}) => {
@@ -31,7 +31,7 @@ const MessageBox = ({reverse, redacted}) => {
         ))}
       </div>
       <form onSubmit={handleSubmit}>
-        <input type='text' onChange={handleChange} value={messageVal}/>
+        <input type='text' onChange={handleChange} placeholder='enter guess' value={messageVal}/>
       </form>
     </div>
   )

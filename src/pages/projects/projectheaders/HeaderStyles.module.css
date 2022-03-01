@@ -1,3 +1,32 @@
+.mazeheaderContainer{
+overflow: hidden;
+padding: 0;
+height:400px;
+display: flex;
+}
+.mazeframe{
+  height: 800px;
+  width: 1300px;
+  transform: scale(.65);
+  transform-origin: top;
+
+
+}
+.welpHeader{
+  background-color: #c41200
+
+}
 .headerContainer{
-  
+  background-color: white;
+}
+.tetrisHeaderContainer{
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+
+}
+.tetrisplayer{
+  position: absolute;
+  top: 0;
+  left: 0;
 }
