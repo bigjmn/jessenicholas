@@ -24,7 +24,8 @@ const Bio = () => {
       <motion.div className={classes.bioWrapper}>
       <h1>Jesse Nicholas</h1>
       <p>Hi there.
-      I'm a self-taught software engineer currently based in Brooklyn, NY.
+      I'm a self-taught software engineer currently based in Brooklyn, NY. I made this website - check out the
+      github repo <a href="https://github.com/bigjmn/jessenicholas">here.</a>
     </p>
     <p>
       I'm also a writer, and have written for various kid's TV shows including Sesame Street, Mecha Builders and Taffy.
