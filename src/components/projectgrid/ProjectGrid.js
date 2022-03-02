@@ -3,13 +3,13 @@ import {useRef, useEffect} from 'react'
 import {motion} from 'framer-motion'
 
 import classes from './ProjectGrid.module.css'
-
+import {useMobile} from '../../hooks/useMobile'
 
 import tetrissnap from '../../assets/projectsnapshots/NewTetrisSnapshot.mp4'
 import welpsnap from '../../assets/projectsnapshots/welpsnapshot.png'
 import MazebotVid from '../../assets/projectsnapshots/MazebotVid.mov'
 import shockdrawvid from '../../assets/projectsnapshots/shockdrawsnapshot.mov'
-
+import mazePic from '../../assets/projectsnapshots/mazePic.png'
 const slideRight = {
   hidden: {
     x: '-100vw'
@@ -50,38 +50,23 @@ const slideLeft2 = {
 }
 const ProjectGrid = () => {
   const navigate = useNavigate()
-  const shockRef = useRef(null)
-  const tetrisRef = useRef(null)
-  const mazeRef = useRef(null)
 
-  const playVids = () => {
-    if (shockRef.current){
-      shockRef.current.play()
-    }
-    if (tetrisRef.current){
-      tetrisRef.current.play()
-    }
-    if (mazeRef.current){
-      mazeRef.current.play()
-    }
-  }
-  useEffect(() => {
-    document.getElementById('playbutton').click()
-  }, [shockRef, tetrisRef, mazeRef])
+
+  const mobile = useMobile()
 
 
 
   return (
     <motion.div className={classes.outerContainer} >
       <h2>projects</h2>
-      <button id='playbutton' onClick={playVids}>play vids</button>
 
       <div className={classes.projectsContainer}>
 
 
           <motion.div whileHover={{scale:1.1}} className={classes.projectWrapper} onClick={() => navigate('/shockanddraw')} variants={slideRight} initial='hidden' animate='visible'>
             <div className={classes.snapShot}>
-              <video ref={shockRef} className={classes.projectSnap} src={shockdrawvid} alt='shock and draw' loop muted></video>
+
+            <video className={classes.projectSnap} src={shockdrawvid} alt='shock and draw' autoPlay loop muted></video>
             </div>
 
             <h3>Shock and Draw</h3>
@@ -93,7 +78,7 @@ const ProjectGrid = () => {
 
           <motion.div whileHover={{scale:1.1}} className={classes.projectWrapper} onClick={() => navigate('/tetrisbuddies')} variants={slideLeft} initial='hidden' animate='visible'>
             <div className={classes.snapShot}>
-              <video ref={tetrisRef} className={classes.projectSnap} src={tetrissnap} alt='tetris buddies' muted loop></video>
+              <video className={classes.projectSnap} src={tetrissnap} alt='tetris buddies' autoPlay loop muted></video>
 
             </div>
             <h3>Tetris Buddies</h3>
@@ -108,7 +93,8 @@ const ProjectGrid = () => {
 
           <motion.div whileHover={{scale:1.1}} className={classes.projectWrapper} onClick={() => navigate('/qmazesolver')} variants={slideRight2} initial='hidden' animate='visible'>
             <div className={classes.snapShot}>
-              <video ref={mazeRef} className={classes.projectSnap} src={MazebotVid} alt='maze solving ai' loop muted ></video>
+              {mobile && <img className={classes.projectSnap} src={mazePic} alt='mazepic'></img>}
+              {!mobile && <video className={classes.projectSnap} src={MazebotVid} alt='maze solving ai' autoPlay loop muted ></video>}
             </div>
             <h3>Q Maze Solver</h3>
             <p>A maze-solivng AI that uses reinforcement learning methods</p>
