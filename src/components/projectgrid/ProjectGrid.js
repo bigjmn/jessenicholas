@@ -52,19 +52,29 @@ const ProjectGrid = () => {
   const navigate = useNavigate()
   const shockRef = useRef(null)
   const tetrisRef = useRef(null)
+  const mazeRef = useRef(null)
 
-  useEffect(() => {
+  const playVids = () => {
     if (shockRef.current){
       shockRef.current.play()
     }
     if (tetrisRef.current){
       tetrisRef.current.play()
     }
-  }, [tetrisRef, shockRef])
+    if (mazeRef.current){
+      mazeRef.current.play()
+    }
+  }
+  useEffect(() => {
+    document.getElementById('playbutton').click()
+  }, [shockRef, tetrisRef, mazeRef])
+
+
 
   return (
     <motion.div className={classes.outerContainer} >
       <h2>projects</h2>
+      <button id='playbutton' onClick={playVids}>play vids</button>
 
       <div className={classes.projectsContainer}>
 
@@ -98,7 +108,7 @@ const ProjectGrid = () => {
 
           <motion.div whileHover={{scale:1.1}} className={classes.projectWrapper} onClick={() => navigate('/qmazesolver')} variants={slideRight2} initial='hidden' animate='visible'>
             <div className={classes.snapShot}>
-              <video className={classes.projectSnap} src={MazebotVid} alt='maze solving ai' autoPlay loop muted ></video>
+              <video ref={mazeRef} className={classes.projectSnap} src={MazebotVid} alt='maze solving ai' loop muted ></video>
             </div>
             <h3>Q Maze Solver</h3>
             <p>A maze-solivng AI that uses reinforcement learning methods</p>
