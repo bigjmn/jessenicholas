@@ -4,9 +4,9 @@ import classes from './Bio.module.css'
 import {motion} from 'framer-motion'
 
 const pageMotion = {
-  initial: { opacity: 0, x: 0 },
-  animate: { opacity: 1, x: 100, transition: { duration: 2 } },
-  exit: { opacity: 0, x:0, transition: { ease: 'easeInOut' } }
+  initial: { opacity: 0, x: -100 },
+  animate: { opacity: 1, x: 0, transition: { duration: 2 } },
+  exit: { opacity: 0, x:-100, transition: { ease: 'easeInOut' } }
 };
 
 const Bio = () => {

@@ -1,5 +1,5 @@
 import {useNavigate} from 'react-router-dom'
-
+import {useRef, useEffect} from 'react'
 import {motion} from 'framer-motion'
 
 import classes from './ProjectGrid.module.css'
@@ -50,6 +50,17 @@ const slideLeft2 = {
 }
 const ProjectGrid = () => {
   const navigate = useNavigate()
+  const shockRef = useRef(null)
+  const tetrisRef = useRef(null)
+
+  useEffect(() => {
+    if (shockRef.current){
+      shockRef.current.play()
+    }
+    if (tetrisRef.current){
+      tetrisRef.current.play()
+    }
+  }, [tetrisRef, shockRef])
 
   return (
     <motion.div className={classes.outerContainer} >
@@ -60,7 +71,7 @@ const ProjectGrid = () => {
 
           <motion.div whileHover={{scale:1.1}} className={classes.projectWrapper} onClick={() => navigate('/shockanddraw')} variants={slideRight} initial='hidden' animate='visible'>
             <div className={classes.snapShot}>
-              <video className={classes.projectSnap} src={shockdrawvid} alt='shock and draw' autoPlay loop muted></video>
+              <video ref={shockRef} className={classes.projectSnap} src={shockdrawvid} alt='shock and draw' loop muted></video>
             </div>
 
             <h3>Shock and Draw</h3>
@@ -72,7 +83,7 @@ const ProjectGrid = () => {
 
           <motion.div whileHover={{scale:1.1}} className={classes.projectWrapper} onClick={() => navigate('/tetrisbuddies')} variants={slideLeft} initial='hidden' animate='visible'>
             <div className={classes.snapShot}>
-              <video className={classes.projectSnap} src={tetrissnap} alt='tetris buddies'></video>
+              <video ref={tetrisRef} className={classes.projectSnap} src={tetrissnap} alt='tetris buddies' muted loop></video>
 
             </div>
             <h3>Tetris Buddies</h3>

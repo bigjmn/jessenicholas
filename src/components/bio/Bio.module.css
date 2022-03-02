@@ -5,13 +5,13 @@
   padding: 18px;
 }
 .bioWrapper{
-  max-width: 600px;
+  max-width: 500px;
   padding-left: 20px;
 }
 .bioWrapper h1{
   text-align: left;
   padding-bottom: 5px;
-  font-size: 4em
+  font-size: 3em
 }
 .bioWrapper p{
 
